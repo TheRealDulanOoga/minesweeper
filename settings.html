@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="code/styles.css" />
+    <script src="code/settings.js" type="module"></script>
+    <link rel="icon" href="code/Icons/Settings.png" />
+    <title>Settings</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <div class="topnav-centered">
+        <span>Settings</span>
+      </div>
+      <a href="index.html"><img src="code/Icons/BackArrow.png" alt="Back" /></a>
+    </div>
+    <main>
+      <div id="slider-container" class="slider-container">
+        <span id="display-board-size"></span>
+        <input
+          type="range"
+          min="5"
+          max="20"
+          class="slider"
+          id="board-size-slider-input"
+        />
+        <span id="display-mine-amount"></span>
+        <input
+          type="range"
+          min="5"
+          max="30"
+          class="slider"
+          id="mine-amount-slider-input"
+        />
+      </div>
+    </main>
+  </body>
+</html>

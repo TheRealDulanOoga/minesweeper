@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="code/styles.css" />
+    <script src="code/script.js" type="module"></script>
+    <link rel="icon" href="code/Icons/Game.png" />
+    <title>Minesweeper</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <div class="topnav-centered">
+        <span>Minesweeper</span>
+      </div>
+      <a id="disable-link" href="index.html"
+        ><img src="code/Icons/Reload.png" alt="Reload"
+      /></a>
+      <a href="settings.html"
+        ><img src="code/Icons/Settings.png" alt="Settings"
+      /></a>
+      <div class="topnav-right">
+        <div>
+          <span>Markers Left - <span data-mine-count></span></span>
+        </div>
+        <div>
+          <span>Tiles Revealed - <span data-revealed-tiles-count></span></span>
+        </div>
+        <div>
+          <span>Timer - <span id="timer-display">00:00</span></span>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="board"></div>
+      <div class="settings-values"><span id="settings-values"></span></div>
+    </main>
+    <div id="game-over-nav" class="overlay">
+      <div class="game-over-text"></div>
+    </div>
+  </body>
+</html>
