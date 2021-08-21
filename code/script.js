@@ -1,13 +1,19 @@
 import { createBoard, markTile, revealTile, checkWin, checkLose, nearbyTiles, doubleClickTile, TILE_STATUSES } from "./minesweeper.js";
 import { getCookie } from "./settings.js";
 
-console.log(getCookie("board-size"))
+var setBoardSize = getCookie("board-size")
+var setMineRatio = getCookie("mine-amount")
 
-const BOARD_SIZE = getCookie("board-size")
-const NUMBER_OF_MINES = Math.floor(Math.pow(BOARD_SIZE, 2) * getCookie("mine-amount") * .01)
+if (setBoardSize < 5 || setBoardSize > 20 || setMineRatio < 5 || setMineRatio > 30) {
+    setBoardSize = 10
+    setMineRatio = 10
+}
+
+const BOARD_SIZE = setBoardSize
+const NUMBER_OF_MINES = Math.floor(Math.pow(BOARD_SIZE, 2) * setMineRatio * .01)
 
 var displaySettingsOptions = document.getElementById("settings-values")
-displaySettingsOptions.innerHTML = "Board Size: " + BOARD_SIZE + " |----| Mines Ratio: " + getCookie("mine-amount") + "%"
+displaySettingsOptions.innerHTML = "Board Size: " + BOARD_SIZE + " |----| Mines Ratio: " + setMineRatio + "%"
 
 const board = createBoard(BOARD_SIZE, NUMBER_OF_MINES)
 const boardElement = document.querySelector('.board')
