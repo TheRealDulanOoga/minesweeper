@@ -1,6 +1,9 @@
 @font-face {
-  font-family: MADE Soulmaze;
-  src: url('Font.otf');
+  font-family: "made_soulmazeregular";
+  src: url("font-webfont.woff2") format("woff2"),
+    url("font-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -10,7 +13,7 @@
 body {
   background-color: rgb(23, 36, 31);
   color: rgb(203, 255, 231);
-  font-family: "MADE Soulmaze", Fallback, sans-serif;
+  font-family: "made_soulmazeregular", Fallback, sans-serif;
   padding: 0;
   margin: 0;
 }
