@@ -7,6 +7,7 @@ var setMineRatio = getCookie("mine-amount")
 if (setBoardSize < 5 || setBoardSize > 20 || setMineRatio < 5 || setMineRatio > 30) {
     setBoardSize = 10
     setMineRatio = 10
+    document.cookie = ("board-size=10; mine-amount=10")
 }
 
 const BOARD_SIZE = setBoardSize
