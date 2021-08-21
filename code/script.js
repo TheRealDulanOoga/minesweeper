@@ -113,7 +113,7 @@ function checkGameEnd() {
 
 var boxSize = (windowHeight - 250) / (BOARD_SIZE) - 5
 boardElement.style.setProperty('--size', BOARD_SIZE)
-boardElement.style.setProperty('--box-size', boxSize / 12 + "vh")
+boardElement.style.setProperty('--box-size', boxSize / 10 + "vh")
 boardElement.style.setProperty('--board-font-size', boxSize / 27.5 + "vh")
 boardElement.style.setProperty('--board-box-radius', windowHeight / 200 / Math.ceil(Math.pow(BOARD_SIZE, .9)) + "vh")
 
